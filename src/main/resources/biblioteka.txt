@@ -1,0 +1,9 @@
+Arthur Conan Doyle;Sherlock Holmes
+Agatha Christie;Morderstwo w Orient Express
+Joe Alex;Powiem wam jak zginął
+Agatha Christie; Morderstwo w Orient Express
+Artur Conan Doyle;Sherlock Holmes
+Agatha Christie; Morderstwo w orient Express
+Joe Alex;Tajemnicze morderstwo
+Agatha Christie; Tajemnicze morderstwo
+Joe Alex;Tajemnicze morderstwo
