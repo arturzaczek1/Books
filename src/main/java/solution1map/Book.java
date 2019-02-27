@@ -1,3 +1,5 @@
+package solution1map;
+
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -29,8 +31,8 @@ public class Book implements Comparable<Book> {
 
     @Override
     public String toString() {
-        return "Książka: " + title +
-                " autor: " + author ;
+        return "Book: " + title +
+                " author: " + author ;
     }
 
     @Override
