@@ -7,16 +7,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class BookDAO {
-    List<Book> books = new ArrayList<>();
+public class BookDAO2 {
+    List<Book2> books = new ArrayList<>();
     private static final String LOCATION = "src\\main\\resources\\biblioteka.txt";
 
     private void initializeBooks() {
         List<String> stringList = initializeListOfStrings();
         for(String strings : stringList){
-            Book book = parse(strings);
+            Book2 book = parse(strings);
             if(checkIfExist(book)){
-                Book book1 = books.stream().filter(a->a.equals(book)).findFirst().get();
+                Book2 book1 = books.stream().filter(a->a.equals(book)).findFirst().get();
                 book1.setCount(book1.getCount() + 1);
             } else {
                 books.add(book);
@@ -35,18 +35,18 @@ public class BookDAO {
         return null;
     }
 
-    private Book parse(String string) {
+    private Book2 parse(String string) {
         String arr[] = string.split(";");
-        Book book = new Book(arr[0].trim(), arr[1].trim());
+        Book2 book = new Book2(arr[0].trim(), arr[1].trim());
         return book;
     }
 
-    private boolean checkIfExist(Book book) {
+    private boolean checkIfExist(Book2 book) {
         return books.stream().filter(a -> a.equals(book)).anyMatch(a -> a.equals(book));
     }
 
     private void sortBooks() {
-        books.sort(Book::compareTo);
+        books.sort(Book2::compareTo);
     }
 
     public void print() {

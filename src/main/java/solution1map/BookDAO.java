@@ -27,7 +27,7 @@ public class BookDAO {
     public void print() {
         List<Book> books = initializeList();
         books.sort(Book::compareTo);
-        Map<Book, Integer> counts = new TreeMap<>();
+        Map<Book, Integer> counts = new LinkedHashMap<>();
 
         for (Book str : books) {
             if (counts.containsKey(str)) {

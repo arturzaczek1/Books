@@ -9,17 +9,17 @@ import java.util.Objects;
 @Setter
 @Getter
 @ToString
-public class Book implements Comparable<Book> {
+public class Book2 implements Comparable<Book2> {
 
     String title;
     String author;
     Integer count;
 
-    public Book(){
+    public Book2(){
 
     }
 
-    public Book(String author, String title) {
+    public Book2(String author, String title) {
         this.author = author;
         this.title = title;
         this.count = 1;
@@ -28,8 +28,8 @@ public class Book implements Comparable<Book> {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Book)) return false;
-        Book book = (Book) o;
+        if (!(o instanceof Book2)) return false;
+        Book2 book = (Book2) o;
         return Objects.equals(getTitle(), book.getTitle()) &&
                 Objects.equals(getAuthor(), book.getAuthor());
     }
@@ -41,7 +41,7 @@ public class Book implements Comparable<Book> {
     }
 
     @Override
-    public int compareTo(Book o) {
+    public int compareTo(Book2 o) {
         int result;
         result = this.author.compareTo(o.author);
         if (result == 0) {
