@@ -43,9 +43,9 @@ public class Book2 implements Comparable<Book2> {
     @Override
     public int compareTo(Book2 o) {
         int result;
-        result = this.author.compareTo(o.author);
+        result = this.title.compareTo(o.title);
         if (result == 0) {
-            result = this.title.compareTo(o.title);
+            result = this.author.compareTo(o.author);
         }
         return result;
     }

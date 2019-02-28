@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class BookDAO2 {
-    List<Book2> books = new ArrayList<>();
+    private List<Book2> books = new ArrayList<>();
     private static final String LOCATION = "src\\main\\resources\\biblioteka.txt";
 
     private void initializeBooks() {

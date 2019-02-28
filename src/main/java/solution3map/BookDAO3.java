@@ -1,9 +1,5 @@
 package solution3map;
 
-import solution1map.Book;
-import solution2list.Book2;
-import sun.dc.pr.PRError;
-
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.*;
@@ -24,7 +20,7 @@ public class BookDAO3 {
         }
     }
 
-    public List<String> initializeStringList() {
+    private List<String> initializeStringList() {
         List<String> stringList = new ArrayList<>();
         try {
             Scanner scanner = new Scanner(new FileReader(PATH));
@@ -47,6 +43,6 @@ public class BookDAO3 {
 
     public void printBooks() {
         initializeMap();
-        map.forEach((a, b) -> System.out.println(a.toString() + ", count: " + b));
+        map.forEach((a, b) -> System.out.println(a.toString() + ", quantity: " + b));
     }
 }
